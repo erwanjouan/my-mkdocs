@@ -1,0 +1,32 @@
+site_name: My MkDocs
+
+#nav:
+#  - 'Kubernetes':
+#      - 'Observability':
+#        - 'Software development lifecycle (SDLC), concepts, phases and models': Domain_1/1.1.K.1.md
+
+theme:
+  name: material
+  palette:
+    scheme: slate
+  features:
+    - search.suggest
+    - navigation.tabs
+    - content.code.copy
+plugins:
+  - search
+  - mkdocs-video # Usage in md: ![type:video](https://www.youtube.com/embed/1OChlDQIKqA)
+  - markdown-exec
+markdown_extensions:
+  - attr_list
+  - pymdownx.critic # https://squidfunk.github.io/mkdocs-material/reference/formatting/
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - mdx_truly_sane_lists
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
